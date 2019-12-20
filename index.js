@@ -19,13 +19,13 @@ const formRoutes = require("./routes/form");
 app.use(formRoutes);
 
 // 5-Connecter ma bdd
-mongoose.connect("mongodb://localhost/meilleurtaux", {
+mongoose.connect(process.env.MONGO_DB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
 
 // 6-Ecouter mon serveur
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("Server is up !");
 });
