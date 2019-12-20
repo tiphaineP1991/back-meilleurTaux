@@ -5,16 +5,14 @@ const Form = mongoose.model("Form", {
   state: String,
   use: String,
   situation: String,
-  location: {
-    country: String,
-    state: Number
+  zipCode: String,
+  amount: {
+    estimated: Number,
+    works: Number,
+    notarialFees: Number,
+    total: Number
   },
-  acquisitionPrice: Number,
-  workPrice: Number,
-  notaryFees: Number,
-  totalPrice: Number,
-  email: String,
-  notification: Boolean
+  email: String
 });
 
 module.exports = Form;
