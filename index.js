@@ -19,7 +19,7 @@ const formRoutes = require("./routes/form");
 app.use(formRoutes);
 
 // 5-Connecter ma bdd
-mongoose.connect(process.env.MONGO_DB_URI, {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
